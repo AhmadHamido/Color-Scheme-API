@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Color Scheme API Page</title>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <input type="color" id="color-picker" class="color-picker" value="#2ED324">
+            <select id="color-mode-selector" class="color-mode-selector">
+                <option value="">--Please Choose a Color--</option>
+                <option>monochrome</option>
+                <option>monochrome-dark</option>
+                <option>monochrome-light</option>
+                <option>analogic</option>
+                <option>complement</option>
+                <option>analogic-complement</option>
+                <option>triad</option>
+            </select>
+            <button class="get-color-btn" id="get-color-btn">Get color scheme</button>
+        </div>
+    </header>
+    <main>
+        <div class="container-main">
+            <section class="color-container color-container-1">
+                <div class="color-area color-1" id="color-1"></div>
+                <p class="color-hex-num" id="color-hex-1">#0C5E12</p>
+            </section>
+
+            <section class="color-container color-container-2">
+                <div class="color-area color-2" id="color-2"></div>
+                <p class="color-hex-num" id="color-hex-2">#118C1A</p>
+            </section>
+
+            <section class="color-container color-container-3">
+                <div class="color-area color-3" id="color-3"></div>
+                <p class="color-hex-num" id="color-hex-3">#16BB21</p>
+            </section>
+
+            <section class="color-container color-container-4">
+                <div class="color-area color-4" id="color-4"></div>
+                <p class="color-hex-num" id="color-hex-4">#1DE62B</p>
+            </section>
+
+            <section class="color-container color-container-5">
+                <div class="color-area color-5" id="color-5"></div>
+                <p class="color-hex-num" id="color-hex-5">#4AEC55</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
