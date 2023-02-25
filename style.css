@@ -6,6 +6,10 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    grid-template-columns: 1.2em auto 1.2em;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ================ 
@@ -13,47 +17,66 @@ Typography
 ================ */
 
 button,
-select,
+.color-mode-selector,
 .color-picker {
     border: 2px solid #D1D5DB;
     cursor: pointer;
 }
 
 button,
-select {
+.color-mode-selector,
+.color-hex-num {
+    font-size: .8125rem;
+}
+
+button,
+.color-mode-selector {
     border-radius: 5px;
     background-color: #fff;
     padding: .5em 1em;
 }
 
 .color-picker {
+    height: 35px;
     padding: .25em;
+    align-self: center;
+}
+
+.color-hex-num {
+    justify-self: center;
 }
 
 /* ================ 
 Layout
 ================ */
 
-.container-main,
-.color-container {
-    display: flex;
-}
-
-.container-main {
-    width: 90%;
+header,
+main {
+    grid-column: 2;
     max-width: 1000px;
 }
 
+body,
+.container-header,
+.container-main,
 .color-container {
-    width: 120px;
-    height: 400px;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
 }
 
-.color-area {
-    height: 90%;
-    width: 100%;
+.container-header {
+    grid-template-columns: repeat(3, auto);
+}
+
+.container-main {
+    grid-template-columns: repeat(5, minmax(70px, 200px));
+}
+
+.color-container {
+    height: 100vh;
+}
+
+.color-mode-selector {
+    justify-self: start;
 }
 
 .color-1 {
@@ -74,4 +97,17 @@ Layout
 
 .color-5 {
     background-color: #4AEC55;
+}
+
+/* ================ 
+Media Query
+================ */
+
+@media (min-width: 500px) {
+    button,
+    .color-mode-selector,
+    .color-hex-num {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
 }
